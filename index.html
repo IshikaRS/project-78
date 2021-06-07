@@ -1,0 +1,59 @@
+<html>
+
+    <head>
+        <title>Family Book</title>
+    </head>
+
+    <body>
+        <center style="margin-top: 40px;">
+        <h1>My Family Book</h1>
+
+        <img src="family image.jpg" style="width: 30%; height: 500px;" id="family_member_image">
+        <h4 id="family_member_name"></h4>
+        <button onclick="update();">Next</button>
+        </center>
+
+        <script>
+
+            var images = [
+                "me-Ishika.jpg",
+                "shashank.jpg",
+                "mom-lakshmi.jpg",
+                "lil sis- Sharika.jpg",
+                "ammama-Dhakshayni.jpg",
+                "thatha-Ramalingam.png",
+                "nannamma-Nirmala.jpg",
+                "thatha-Nagendra.jpg",
+            ]
+
+            var names = [
+                "Ishika(Myself)",
+                "Shashank(Dad)",
+                "Lakshmi(Mom)",
+                "Sharika(Little Sister)",
+                "Dhakshayni(Mom's Mother - Ammama)",
+                "Ramalingam(Mom's Father - Thatha)",
+                "Nirmala(Dad's Mother - Nannamma)",
+                "Nagendra(Dad's Father - Thatha)",
+            ]
+
+            var i = 0;
+
+            function update() {
+                i++;
+                var numbers_of_family_member_in_array = 7
+                if(i > numbers_of_family_member_in_array)
+                {
+                    i = 0;
+                }
+                var updatedImage = images[i];
+                var updatedName = names[i];
+                document.getElementById("family_member_image").src = updatedImage;
+                document.getElementById("family_member_name").innerHTML = updatedName;
+            }
+
+        </script>
+
+    </body>
+
+</html>
